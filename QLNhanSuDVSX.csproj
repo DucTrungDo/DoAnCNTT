@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D89A466B-331F-438F-9A5F-3CA825A33F42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLNhanSuDVSX</RootNamespace>
+    <AssemblyName>QLNhanSuDVSX</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChamCong.cs" />
+    <Compile Include="CongNhan.cs" />
+    <Compile Include="DangKyDaoTaoKySu.cs" />
+    <Compile Include="DangKy_TeamBuilding.cs" />
+    <Compile Include="DanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhGia.Designer.cs">
+      <DependentUpon>DanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhGiaTo.cs" />
+    <Compile Include="DangKyDaoTaoKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyDaoTaoKS.Designer.cs">
+      <DependentUpon>DangKyDaoTaoKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaoTaoKySu.cs" />
+    <Compile Include="DangKyTeamBuillding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyTeamBuillding.Designer.cs">
+      <DependentUpon>DangKyTeamBuillding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuQuanLyNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuQuanLyNhanSu.Designer.cs">
+      <DependentUpon>MenuQuanLyNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinChamCong.Designer.cs">
+      <DependentUpon>ThongTinChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinNhanSu.Designer.cs">
+      <DependentUpon>ThongTinNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinCongNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCongNhan.Designer.cs">
+      <DependentUpon>ThongTinCongNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KySu.cs" />
+    <Compile Include="LuongThuong.cs" />
+    <Compile Include="NhanSu.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLNhanSuDVSXs.cs" />
+    <Compile Include="ThongTinKySu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinKySu.Designer.cs">
+      <DependentUpon>ThongTinKySu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinNhanVien.Designer.cs">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinTrinhDoHV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTrinhDoHV.Designer.cs">
+      <DependentUpon>ThongTinTrinhDoHV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiem.Designer.cs">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TinhLuongThuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TinhLuongThuong.Designer.cs">
+      <DependentUpon>TinhLuongThuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrinhDo.cs" />
+    <Compile Include="USER.cs" />
+    <EmbeddedResource Include="DanhGia.resx">
+      <DependentUpon>DanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyDaoTaoKS.resx">
+      <DependentUpon>DangKyDaoTaoKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyTeamBuillding.resx">
+      <DependentUpon>DangKyTeamBuillding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuQuanLyNhanSu.resx">
+      <DependentUpon>MenuQuanLyNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinChamCong.resx">
+      <DependentUpon>ThongTinChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinNhanSu.resx">
+      <DependentUpon>ThongTinNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCongNhan.resx">
+      <DependentUpon>ThongTinCongNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ThongTinKySu.resx">
+      <DependentUpon>ThongTinKySu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinNhanVien.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinTrinhDoHV.resx">
+      <DependentUpon>ThongTinTrinhDoHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiem.resx">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TinhLuongThuong.resx">
+      <DependentUpon>TinhLuongThuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Münster,_LVM,_Bürogebäude_--_2013_--_5149-51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Münster,_LVM,_Bürogebäude_--_2013_--_5149-511.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taicho3jpg97261628740079-16287-3619-9119-1628763621_r_680x408.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\types-of-engineers1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\types-of-engineers2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
