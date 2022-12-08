@@ -19,7 +19,6 @@ namespace QLNhanSuDVSX
         public virtual DbSet<DanhGiaTo> DanhGiaToes { get; set; }
         public virtual DbSet<DaoTaoKySu> DaoTaoKySus { get; set; }
         public virtual DbSet<KySu> KySus { get; set; }
-        public virtual DbSet<LuongThuong> LuongThuongs { get; set; }
         public virtual DbSet<NhanSu> NhanSus { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<TrinhDo> TrinhDoes { get; set; }
@@ -141,11 +140,6 @@ namespace QLNhanSuDVSX
                 .HasOptional(e => e.DangKyDaoTaoKySu)
                 .WithRequired(e => e.KySu);
 
-            modelBuilder.Entity<LuongThuong>()
-                .Property(e => e.LoaiThuong)
-                .IsFixedLength()
-                .IsUnicode(false);
-
             modelBuilder.Entity<NhanSu>()
                 .Property(e => e.MaNS)
                 .IsFixedLength()
@@ -233,7 +227,6 @@ namespace QLNhanSuDVSX
 
             modelBuilder.Entity<TrinhDo>().ToTable("TrinhDo");
             modelBuilder.Entity<NhanSu>().ToTable("NhanSu");
-            modelBuilder.Entity<LuongThuong>().ToTable("Luongthuong");
             modelBuilder.Entity<KySu>().ToTable("KySu");
             modelBuilder.Entity<CongNhan>().ToTable("CongNhan");
             modelBuilder.Entity<NhanVien>().ToTable("NhanVien");
@@ -255,7 +248,6 @@ namespace QLNhanSuDVSX
                     try
                     {
                         TrinhDo.InsertTrinhDo();
-                        LuongThuong.InsertLuongThuong();
                         KySu.InsertKySu();
                         DanhGiaTo.InsertDanhGiaTo();
                         CongNhan.InsertCongNhan();

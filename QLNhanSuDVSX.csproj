@@ -129,7 +129,6 @@
       <DependentUpon>ThongTinCongNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="KySu.cs" />
-    <Compile Include="LuongThuong.cs" />
     <Compile Include="NhanSu.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
